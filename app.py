@@ -1,9 +1,9 @@
-from flask import Flask
+import flask
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 
 FlaskInstrumentor().instrument(enable_commenter=True, commenter_options={})
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 def app_ready():
     # Code goes here to determine if your app is ready to start receiving traffic
